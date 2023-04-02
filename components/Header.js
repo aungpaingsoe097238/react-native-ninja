@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
         display : 'flex',
         justifyContent : 'center',
         alignItems: 'center',  
-        backgroundColor : "green",
+        backgroundColor : "coral",
         color: "#fff"
     },
     title : {
