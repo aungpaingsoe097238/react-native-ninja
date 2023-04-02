@@ -1,8 +1,9 @@
 import { StyleSheet, View, Text } from "react-native";
+import Home from "./screens/Home";
 
 export default function App () {
   return <View style={styles.container}>
-    <Text>Hello Naija</Text>
+    <Home/>
   </View>
 }
 
