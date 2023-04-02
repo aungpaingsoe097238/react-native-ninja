@@ -13,6 +13,7 @@ import Header from "./components/Header";
 import ToDoItem from "./components/ToDoItem";
 import AddToDo from "./components/AddToDo";
 
+
 export default function App() {
   const [lists, setLists] = useState([
     { name: "apple", key: 1 },
@@ -44,7 +45,7 @@ export default function App() {
   return (
     <TouchableWithoutFeedback
       onPress={() => {
-        Keyboard.dismiss()
+        Keyboard.dismiss();
         console.log("touchable withoub feedback");
       }}
     >
@@ -54,6 +55,7 @@ export default function App() {
           <View style={styles.list}>
             <AddToDo submitHandler={submitHandler} />
             <FlatList
+              style={styles.list}
               data={lists}
               renderItem={({ item }) => (
                 <ToDoItem item={item} pressHandler={pressHandler} />
@@ -73,6 +75,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   context: {
+    flex: 1,
     padding: 30,
+  },
+  list: {
+    flex: 1,
   },
 });
